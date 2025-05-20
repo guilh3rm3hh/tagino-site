@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: 0 77 38; /* #004d26 - verde escuro do logo */
+  --accent: 248 181 0; /* #f8b500 - amarelo/dourado do logo */
+  --dark: 34 34 34; /* #222222 */
+  --light: 244 244 244; /* #f4f4f4 */
+  --text: 51 51 51; /* #333333 */
+}
+
+@layer base {
+  body {
+    @apply bg-white text-foreground;
+  }
+}
+
+.font-heading {
+  font-family: var(--font-montserrat);
+  font-weight: 700;
+  letter-spacing: 0.025em;
+}
+
+.font-body {
+  font-family: var(--font-inter);
+}
+
+.container {
+  @apply px-4 mx-auto max-w-7xl;
+}
+
+.btn-primary {
+  @apply bg-accent text-dark font-bold py-3 px-6 rounded-md hover:bg-accent/90 transition-all uppercase tracking-wider;
+}
+
+.btn-secondary {
+  @apply bg-transparent border-2 border-white text-white font-bold py-3 px-6 rounded-md hover:bg-white/10 transition-all uppercase tracking-wider;
+}
+
+.section-title {
+  @apply font-heading text-3xl md:text-4xl lg:text-5xl uppercase mb-6 text-center;
+}
+
+.section-padding {
+  @apply py-16 md:py-24;
+}
+
+.card-hover {
+  @apply transition-all duration-300 hover:scale-105 hover:shadow-lg;
+}
